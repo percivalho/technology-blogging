@@ -148,6 +148,18 @@ section {
 a {
   text-decoration: none;
 }
+
+.card a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+
+.card a:hover {
+  color: green; 
+  text-decoration: underline; 
+}
+
 .input-container {
   display: flex;
   justify-content: center;  

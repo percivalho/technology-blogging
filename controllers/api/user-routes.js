@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User } = require('../../models');
-const withAuth = require('../../utils/auth');
 
 // CREATE new user
 router.post('/signup', async (req, res) => {
@@ -55,7 +54,6 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.loggedIn = true;
       req.session.username = req.body.username;
-      //withAuth();
 
       /*res
         .status(200)
