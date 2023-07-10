@@ -3,8 +3,6 @@ const submitUpdateHandler = async (event) => {
   
     const title = document.querySelector('#title').value.trim();
     const description = document.querySelector('#description').value.trim();
-    //const email = document.querySelector('#email-signup').value.trim();
-    //const password = document.querySelector('#password-signup').value.trim();
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];
@@ -30,20 +28,12 @@ const submitUpdateHandler = async (event) => {
   const submitDeleteHandler = async (event) => {
     event.preventDefault();
   
-    //const title = document.querySelector('#title').value.trim();
-    //const description = document.querySelector('#description').value.trim();
-    //const email = document.querySelector('#email-signup').value.trim();
-    //const password = document.querySelector('#password-signup').value.trim();
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];
     
     const response = await fetch(`/myblog/${id}`, {
       method: 'DELETE',
-      /*body: JSON.stringify({
-        title: title,
-        description: description,
-      }),*/
       headers: { 'Content-Type': 'application/json' },
     });
 

@@ -152,6 +152,8 @@ Blog RESTFUL operations
 6.  Delete a blog post after user login
 7.  add a new comment on your blog post
 8.  add a new comment on not own blog post.
+9.  get a non-existant blog post
+10. get a not your blog post.
 
 
 

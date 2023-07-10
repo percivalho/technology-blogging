@@ -1,7 +1,5 @@
 const newPostButton = document.querySelector('.new-post-button');
 const articleElement = document.querySelector('.sample-img');
-//const title = document.querySelector('#title').value;
-//const description = document.querySelector('#description').value;
 const createButton = document.querySelector('#crate');
 
 newPostButton.addEventListener('click', () => {
@@ -13,8 +11,6 @@ const submitBlogHandler = async (event) => {
   
     const title = document.querySelector('#title').value.trim();
     const description = document.querySelector('#description').value.trim();
-    await console.log(title);
-    await console.log(description);
     if (title && description) {
       const response = await fetch(`/dashboard`, {
         method: 'POST',

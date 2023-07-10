@@ -2,8 +2,6 @@ const submitCommentHandler = async (event) => {
     event.preventDefault();
   
     const comment = document.querySelector('#comment').value.trim();
-    //const email = document.querySelector('#email-signup').value.trim();
-    //const password = document.querySelector('#password-signup').value.trim();
     const id = window.location.toString().split('/')[
         window.location.toString().split('/').length - 1
       ];

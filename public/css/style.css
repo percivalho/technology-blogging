@@ -62,7 +62,7 @@ section {
 }
 
 
-
+/* that is the title bar, white font and dark blue background*/
 .title {
   display: flex;
   justify-content: space-between;
@@ -82,6 +82,7 @@ section {
 
 }
 
+/* form stack column-wise*/
 .sample-img form {
   display: flex;
   flex-direction: column;
@@ -108,6 +109,7 @@ section {
   cursor: pointer;
 }
 
+/* effect on button hover */
 .sample-img input[type="submit"]:hover {
   background-color: #1e3d5a;
 }
@@ -129,7 +131,7 @@ section {
   width: 100%;
 }
 
-
+/* new post button on the lower right-hand corner*/
 .new-post-button {
   position: fixed;
   bottom: 20px;
@@ -141,10 +143,12 @@ section {
   cursor: pointer;
 }
 
+/* effect on hover on button*/
 .new-post-button:hover {
   background-color: #1e3d5a;
 }
 
+/* default: no underline for <a> link*/
 a {
   text-decoration: none;
 }
@@ -155,11 +159,13 @@ a {
   transition: color 0.3s;
 }
 
+/* on hover: add underline*/
 .card a:hover {
   color: green; 
   text-decoration: underline; 
 }
 
+/* for username and password, make them display center */
 .input-container {
   display: flex;
   justify-content: center;  
