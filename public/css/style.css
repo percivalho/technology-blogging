@@ -145,6 +145,13 @@ section {
   background-color: #1e3d5a;
 }
 
+a {
+  text-decoration: none;
+}
+.input-container {
+  display: flex;
+  justify-content: center;  
+}
 
 @media screen and (max-width: 768px) {
   /* Use flex-direction to stack the navbar, sidebar, and body */

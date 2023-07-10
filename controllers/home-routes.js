@@ -73,8 +73,8 @@ router.get('/blog/:id', withAuth, async (req, res) => {
   }
 });
 
-// Login
-router.post('/api/blog/:id', async (req, res) => {
+// Post Blog
+router.post('/api/blog/:id', withAuth, async (req, res) => {
   try {
     const dbUserData = await User.findOne({
       where: {
@@ -119,7 +119,7 @@ router.post('/api/blog/:id', async (req, res) => {
 
 // Dashboard
 // TODO: Replace the logic below with the custom middleware
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   /*if (!req.session.loggedIn) {
     res.redirect('/login');
@@ -167,7 +167,7 @@ router.get('/dashboard', async (req, res) => {
   }
 });
 
-router.post('/dashboard', async (req, res) => {
+router.post('/dashboard', withAuth, async (req, res) => {
   try {
     const dbUserData = await User.findOne({
       where: {
@@ -213,7 +213,7 @@ router.post('/dashboard', async (req, res) => {
 
 // GET one gallery
 // TODO: Replace the logic below with the custom middleware
-router.get('/myblog/:id', async (req, res) => {
+router.get('/myblog/:id', withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   /*if (!req.session.loggedIn) {
     res.redirect('/login');
@@ -236,7 +236,7 @@ router.get('/myblog/:id', async (req, res) => {
 
 
 // DELETE a reader
-router.delete('/myblog/:id', async (req, res) => {
+router.delete('/myblog/:id', withAuth, async (req, res) => {
   try {
     const dbBlogData = await Blog.destroy({
       where: {
@@ -256,7 +256,7 @@ router.delete('/myblog/:id', async (req, res) => {
 });
 
 // PUT update a user
-router.put('/myblog/:id', async (req, res) => {
+router.put('/myblog/:id', withAuth, async (req, res) => {
   try {
     const dbBlogData = await Blog.update(req.body, {
       where: {
@@ -277,41 +277,17 @@ router.put('/myblog/:id', async (req, res) => {
 
 
 
-// GET one painting
-// TODO: Replace the logic below with the custom middleware
-router.get('/painting/:id', async (req, res) => {
-  // If the user is not logged in, redirect the user to the login page
-  if (!req.session.loggedIn) {
-    res.redirect('/login');
-  } else {
-    // If the user is logged in, allow them to view the painting
-    try {
-      const dbPaintingData = await Painting.findByPk(req.params.id);
-
-      const painting = dbPaintingData.get({ plain: true });
-
-      res.render('painting', { painting, loggedIn: req.session.loggedIn });
-    } catch (err) {
-      console.log(err);
-      res.status(500).json(err);
-    }
-  }
-});
 
 router.get('/login', (req, res) => {
   if (req.session.loggedIn) {
     res.redirect('/');
     return;
   }
-
   res.render('login');
 });
 
 router.get('/signup', (req, res) => {
-  /*if (req.session.loggedIn) {
-    res.redirect('/');
-    return;
-  }*/
+
   res.render('signup');
 });
 
