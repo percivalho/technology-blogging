@@ -16,6 +16,7 @@ router.get('/', async (req, res) => {
           model: User,
         }
       ],
+      order: [['createdAt', 'DESC']],      
     });
 
     const blogs = dbBlogData.map((blog) =>
