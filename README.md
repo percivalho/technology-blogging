@@ -70,6 +70,11 @@ that would install the following package:
 
 6.  Bcrypt. it is a widely used library in Node.js that provides secure hashing and salting of passwords, ensuring the storage and comparison of passwords are protected 
 
+for heroku application, no need installation, just go to:
+
+https://technology-blogging-7e60b5cecd3d.herokuapp.com/
+
+
 ## Technologies Used
 
 This application is built using the following technologies:
@@ -98,6 +103,15 @@ run 'npm run seed' to setup the seeds data
 
 for localhost:
 then run 'npm run start' to invoke the online store backend.
+
+for heroku application, no need installation, just go to:
+
+https://technology-blogging-7e60b5cecd3d.herokuapp.com/
+
+![herokuserver](assets/homepage.png)
+
+
+
 
 
 ## Features
@@ -145,7 +159,7 @@ Blog RESTFUL operations
 
 Link to Heroku:
 
-
+https://technology-blogging-7e60b5cecd3d.herokuapp.com
 
 
 Link to GitHub repo:
