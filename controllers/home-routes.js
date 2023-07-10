@@ -144,6 +144,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
           where: {
             user_id: dbUserData.id,
           },
+          order: [['createdAt', 'DESC']], 
         });
         let blogs ={};
         if (dbBlogData){
