@@ -3,7 +3,7 @@ const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // CREATE new user
-/*router.post('/', async (req, res) => {
+router.post('/signup', async (req, res) => {
   try {
 
     await console.log(req.body);  
@@ -17,16 +17,18 @@ const withAuth = require('../../utils/auth');
       req.session.loggedIn = true;
       req.session.username = req.body.username;
 
-      res.status(200).json(dbUserData);
+      //res.status(200).json(dbUserData);
+      res.redirect('/');        
+
     });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
-});*/
+});
 
 // Login
-router.post('/', async (req, res) => {
+router.post('/login', async (req, res) => {
   try {
     const dbUserData = await User.findOne({
       where: {
