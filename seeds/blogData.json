@@ -25,9 +25,21 @@
     "user_id": 4
   },
   {
-    "id": 5,
-    "title": "Machine Learning in Python: A Comprehensive Guide",
-    "description": "This post provides a comprehensive guide to getting started with machine learning in Python, covering key concepts, libraries, and techniques.",
+    "id": 5,    
+    "title": "Introduction to Full Stack Development",
+    "description": "In this blog post, we will explore the fundamentals of full stack development and its importance in modern web development.",
     "user_id": 1
+  },
+  {
+    "id": 6,    
+    "title": "Backend Technologies for Full Stack Development",
+    "description": "Learn about popular backend technologies used in full stack development, including Node.js, Express.js, and databases like MySQL or MongoDB.",
+    "user_id": 2
+  },
+  {
+    "id": 7,    
+    "title": "Frontend Frameworks for Full Stack Development",
+    "description": "Discover frontend frameworks like React, Angular, and Vue.js that enable efficient full stack development by building dynamic user interfaces.",
+    "user_id": 3
   }
 ]
