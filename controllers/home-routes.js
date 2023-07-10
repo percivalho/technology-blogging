@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
     const blogs = dbBlogData.map((blog) =>
       blog.get({ plain: true })
     );
-    console.log(blogs);
+    // console.log(blogs);
     res.render('homepage', {
       blogs,
       loggedIn: req.session.loggedIn,
@@ -32,9 +32,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-// GET one gallery
+// GET one blog
 // TODO: Replace the logic below with the custom middleware
-router.get('/blog/:id', async (req, res) => {
+router.get('/blog/:id', withAuth, async (req, res) => {
   // If the user is not logged in, redirect the user to the login page
   /*if (!req.session.loggedIn) {
     res.redirect('/login');
